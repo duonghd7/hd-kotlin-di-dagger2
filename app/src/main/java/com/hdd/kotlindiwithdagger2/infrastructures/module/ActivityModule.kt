@@ -2,6 +2,7 @@ package com.hdd.kotlindiwithdagger2.infrastructures.module
 
 import android.app.Activity
 import android.content.Context
+import com.hdd.kotlindiwithdagger2.infrastructures.model.Person
 import com.hdd.kotlindiwithdagger2.infrastructures.scope.ActivityScope
 import com.hdd.kotlindiwithdagger2.infrastructures.scope.ApplicationScope
 import dagger.Module

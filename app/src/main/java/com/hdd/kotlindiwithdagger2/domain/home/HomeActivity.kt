@@ -7,6 +7,7 @@ import android.widget.TextView
 import com.hdd.kotlindiwithdagger2.MainApplication
 import com.hdd.kotlindiwithdagger2.R
 import com.hdd.kotlindiwithdagger2.domain.second.SecondActivity_
+import com.hdd.kotlindiwithdagger2.infrastructures.model.Person
 import com.hdd.kotlindiwithdagger2.infrastructures.module.ActivityModule
 import org.androidannotations.annotations.*
 import retrofit2.Retrofit
@@ -23,10 +24,8 @@ open class HomeActivity : Activity() {
     @App
     lateinit var mainApplication: MainApplication
 
-    @ViewById(R.id.activity_home_tv_hello)
-    protected lateinit var tvHello: TextView
-
     @Inject lateinit var retrofit: Retrofit
+    @Inject lateinit var person: Person
 
     @AfterInject
     fun afterInject() {

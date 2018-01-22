@@ -5,8 +5,8 @@ import java.lang.annotation.RetentionPolicy
 import javax.inject.Scope
 
 /**
- * Created by duonghd on 1/22/2018.
- * duonghd1307@gmail.com
+ * Created on 1/22/2018.
+ * @author duonghd
  */
 
 @Suppress("DEPRECATED_JAVA_ANNOTATION")

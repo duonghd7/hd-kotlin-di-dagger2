@@ -1,5 +1,6 @@
 package com.hdd.kotlindiwithdagger2.infrastructures.module
 
+import com.hdd.kotlindiwithdagger2.infrastructures.model.Person
 import com.hdd.kotlindiwithdagger2.infrastructures.scope.ApplicationScope
 import dagger.Component
 import retrofit2.Retrofit
@@ -13,4 +14,6 @@ import retrofit2.Retrofit
 @Component(modules = arrayOf(ApplicationModule::class))
 interface ApplicationComponent {
     fun retrofit(): Retrofit
+
+    fun person(): Person
 }

@@ -24,10 +24,9 @@ android {
     }
 }
 
-def AAVersion = "4.4.0"
+def AAVersion = '4.4.0'
 def gsonVersion = '2.2.+'
 def retrofitVersion = '2.3.0'
-def converterMoshiVersion = '2.3.0'
 def urlconnectionVersion = '2.7.5'
 def okhttpVersion = '3.3.1'
 
@@ -45,7 +44,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     /*
-    * kotlin annotaion
+    * kotlin annotation
     * */
     kapt "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
@@ -64,7 +63,7 @@ dependencies {
     compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
     compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-moshi:$converterMoshiVersion"
+    compile "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
     compile "com.squareup.okhttp:okhttp-urlconnection:$urlconnectionVersion"
     compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
 }
