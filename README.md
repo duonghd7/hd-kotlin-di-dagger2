@@ -66,7 +66,7 @@
 - [SecondActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/second/SecondActivity.kt)
 - [SecondComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/second/SecondComponent.kt)
 - [MainApplication.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/MainApplication.kt)
-- Edit [AndroidManifest.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/AndroidManifest.xml)
+- [AndroidManifest.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/AndroidManifest.xml)
 ```
     <application
         android:name=".MainApplication_"
@@ -82,6 +82,8 @@
           <activity android:name=".domain.second.SecondActivity_"/>
     </application>
 ```
+- [activity_home.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/res/layout/activity_home.xml)
+- [activity_second.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/res/layout/activity_second.xml)
 
 ### III. Use
 - In [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt), create [Person](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/model/Person.kt) for app.
