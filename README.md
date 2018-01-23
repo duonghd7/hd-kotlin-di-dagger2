@@ -2,7 +2,7 @@
 
 ### Prepare
 1. Install [Android Studio](https://developer.android.com/studio/index.html) version 3.0.1 or more
-2. Create new android project and check on "Include Kotlin support"
+2. Create new android project and check on **"Include Kotlin support"**
 
 ![image](https://user-images.githubusercontent.com/18477507/35255147-2ea4d6c4-0020-11e8-84c0-4e57b42d8b3c.png)
 
@@ -86,7 +86,7 @@
 - [activity_second.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/res/layout/activity_second.xml)
 
 ### III. Use
-- In [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt), create [Person](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/model/Person.kt) for app.
+- In [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt), create [Person](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/model/Person.kt) for app
 ```
     @Module
     class ApplicationModule(val app: Application) {
@@ -99,7 +99,7 @@
         }
     }
 ```
-- In [ApplicationComponent](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationComponent.kt) provide resources created by [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt).
+- In [ApplicationComponent](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationComponent.kt) provide resources created by [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt)
 ```
     @ApplicationScope
     @Component(modules = arrayOf(ApplicationModule::class))
@@ -107,14 +107,14 @@
         fun person(): Person
     }
 ```
-- In each activity will inject to use without create new Person
+- In each activity will inject to use without create new **Person**
 ```
     @Inject lateinit var person: Person
 ```
-> HomeActivity:
+**HomeActivity:**
 
 <kbd>![image](https://user-images.githubusercontent.com/18477507/35257627-fbb50a06-002c-11e8-834b-bc3e99e8bf1d.png)</kbd>
 
-> SecondActivity:
+**SecondActivity:**
 
 <kbd>![image](https://user-images.githubusercontent.com/18477507/35257653-2640bcfc-002d-11e8-8d24-8a560aa46214.png)</kbd>
