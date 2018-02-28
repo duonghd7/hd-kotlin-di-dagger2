@@ -41,7 +41,7 @@
         |-- second
             |-- SecondActivity.kt
             |-- SecondComponent.kt
-    |-- infastructures
+    |-- infrastructures
         |-- model
             |-- Person.kt
         |-- module
