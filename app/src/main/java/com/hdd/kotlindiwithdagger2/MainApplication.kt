@@ -5,16 +5,14 @@ import android.app.Application
 import com.hdd.kotlindiwithdagger2.infrastructures.module.ApplicationComponent
 import com.hdd.kotlindiwithdagger2.infrastructures.module.ApplicationModule
 import com.hdd.kotlindiwithdagger2.infrastructures.module.DaggerApplicationComponent
-import org.androidannotations.annotations.EApplication
 
 /**
  * Created on 1/22/2018.
  * @author duonghd
  */
 
-@SuppressLint("Registered")
-@EApplication
 open class MainApplication : Application() {
+
     companion object {
         lateinit var applicationComponent: ApplicationComponent
     }
@@ -23,11 +21,7 @@ open class MainApplication : Application() {
         super.onCreate()
 
         applicationComponent = DaggerApplicationComponent.builder()
-                .applicationModule(ApplicationModule(this))
+                .applicationModule(ApplicationModule())
                 .build()
-    }
-
-    open fun getApplicationComponent(): ApplicationComponent {
-        return applicationComponent
     }
 }

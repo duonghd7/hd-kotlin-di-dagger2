@@ -1,21 +1,27 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 apply plugin: "kotlin-kapt"
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.ext.coreVersion.compileSdkVersion
+    buildToolsVersion rootProject.ext.coreVersion.buildToolsVersion
+
     defaultConfig {
         applicationId "com.hdd.kotlindiwithdagger2"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion rootProject.ext.coreVersion.minSdkVersion
+        targetSdkVersion rootProject.ext.coreVersion.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,47 +30,25 @@ android {
     }
 }
 
-def AAVersion = '4.4.0'
-def daggerVersion = '2.11'
-def gsonVersion = '2.2.+'
-def retrofitVersion = '2.3.0'
-def urlconnectionVersion = '2.7.5'
-def okhttpVersion = '3.3.1'
-
 kapt {
     generateStubs = true
 }
 
+def dagger = 2.24
+def daggerCompiler = 2.24
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.coreVersion.kotlinVersion}"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    /*
-    * kotlin annotation
-    * */
-    kapt "org.androidannotations:androidannotations:$AAVersion"
-    implementation "org.androidannotations:androidannotations-api:$AAVersion"
-
-    /*
-    * kotlin dagger
-    * */
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    provided 'org.glassfish:javax.annotation:10.0-b28'
-
-    /*
-    * kotlin retrofit
-    * */
-    compile "com.google.code.gson:gson:$gsonVersion"
-    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
-    compile "com.squareup.okhttp:okhttp-urlconnection:$urlconnectionVersion"
-    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.google.dagger:dagger:$dagger"
+    implementation "com.google.dagger:dagger-android:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$daggerCompiler"
+    kapt "com.google.dagger:dagger-android-processor:$daggerCompiler"
 }

@@ -1,7 +1,5 @@
 package com.hdd.kotlindiwithdagger2.infrastructures.scope
 
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy
 import javax.inject.Scope
 
 /**
@@ -9,7 +7,6 @@ import javax.inject.Scope
  * @author duonghd
  */
 
-@Suppress("DEPRECATED_JAVA_ANNOTATION")
 @Scope
-@Retention(RetentionPolicy.RUNTIME)
+@kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
 annotation class ActivityScope

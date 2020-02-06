@@ -5,12 +5,9 @@ package com.hdd.kotlindiwithdagger2.infrastructures.model
  * @author duonghd
  */
 
-class Person(name: String, age: Int) {
-    private val name: String
-    private val age: Int
+class Person(val name: String, val age: Int) {
 
-    init {
-        this.name = name
-        this.age = age
+    override fun toString(): String {
+        return "{\n\"name\": $name,\n\"age\": $age\n}"
     }
 }
