@@ -11,8 +11,8 @@
 ```
     apply plugin: "kotlin-kapt"
 
-    def AAVersion = '4.4.0'
-    def daggerVersion = '2.11'
+    def dagger = 2.24
+    def daggerCompiler = 2.24
 
     kapt {
         generateStubs = true
@@ -21,12 +21,10 @@
     dependencies {
         ...
 
-        kapt "org.androidannotations:androidannotations:$AAVersion"
-        implementation "org.androidannotations:androidannotations-api:$AAVersion"
-
-        kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-        implementation "com.google.dagger:dagger:$daggerVersion"
-        provided 'org.glassfish:javax.annotation:10.0-b28'
+        implementation "com.google.dagger:dagger:$dagger"
+        implementation "com.google.dagger:dagger-android:$dagger"
+        kapt "com.google.dagger:dagger-compiler:$daggerCompiler"
+        kapt "com.google.dagger:dagger-android-processor:$daggerCompiler"
     }
 ```
 
@@ -55,31 +53,24 @@
 ```
 
 2. Create files and content flow as
-- [ApplicationScope.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/scope/ApplicationScope.kt)
-- [ActivityScope.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/scope/ActivityScope.kt)
-- [ApplicationModule.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt)
-- [ApplicationComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationComponent.kt)
-- [ActivityModule.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ActivityModule.kt)
-- [Person.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/model/Person.kt)
-- [HomeActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/home/HomeActivity.kt)
-- [HomeComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/home/HomeComponent.kt)
-- [SecondActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/second/SecondActivity.kt)
-- [SecondComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/domain/second/SecondComponent.kt)
+- [ApplicationScope.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/scope/ApplicationScope.kt)
+- [ActivityScope.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/scope/ActivityScope.kt)
+- [ApplicationModule.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ApplicationModule.kt)
+- [ApplicationComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ApplicationComponent.kt)
+- [ActivityModule.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ActivityModule.kt)
+- [Person.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/model/Person.kt)
+- [HomeActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/home/HomeActivity.kt)
+- [HomeComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/home/HomeComponent.kt)
+- [SecondActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/second/SecondActivity.kt)
+- [SecondComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/second/SecondComponent.kt)
 - [MainApplication.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/MainApplication.kt)
 - [AndroidManifest.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/AndroidManifest.xml)
 ```
     <application
-        android:name=".MainApplication_"
         ...
-
-        <activity android:name=".domain.home.HomeActivity_">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN"/>
-                  <category android:name="android.intent.category.LAUNCHER"/>
-              </intent-filter>
-          </activity>
-
-          <activity android:name=".domain.second.SecondActivity_"/>
+        android:name=".MainApplication">
+        
+        ...
     </application>
 ```
 - [activity_home.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/res/layout/activity_home.xml)
