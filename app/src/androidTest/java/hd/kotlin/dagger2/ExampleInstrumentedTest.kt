@@ -1,4 +1,4 @@
-package com.hdd.kotlindiwithdagger2
+package hd.kotlin.dagger2
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

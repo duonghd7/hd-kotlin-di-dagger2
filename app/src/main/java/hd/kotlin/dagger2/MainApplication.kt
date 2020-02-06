@@ -1,10 +1,9 @@
-package com.hdd.kotlindiwithdagger2
+package hd.kotlin.dagger2
 
-import android.annotation.SuppressLint
 import android.app.Application
-import com.hdd.kotlindiwithdagger2.infrastructures.module.ApplicationComponent
-import com.hdd.kotlindiwithdagger2.infrastructures.module.ApplicationModule
-import com.hdd.kotlindiwithdagger2.infrastructures.module.DaggerApplicationComponent
+import hd.kotlin.dagger2.infrastructures.module.ApplicationComponent
+import hd.kotlin.dagger2.infrastructures.module.ApplicationModule
+import hd.kotlin.dagger2.infrastructures.module.DaggerApplicationComponent
 
 /**
  * Created on 1/22/2018.

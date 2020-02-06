@@ -1,7 +1,7 @@
-package com.hdd.kotlindiwithdagger2.infrastructures.module
+package hd.kotlin.dagger2.infrastructures.module
 
-import com.hdd.kotlindiwithdagger2.infrastructures.model.Person
-import com.hdd.kotlindiwithdagger2.infrastructures.scope.ApplicationScope
+import hd.kotlin.dagger2.infrastructures.model.Person
+import hd.kotlin.dagger2.infrastructures.scope.ApplicationScope
 import dagger.Module
 import dagger.Provides
 

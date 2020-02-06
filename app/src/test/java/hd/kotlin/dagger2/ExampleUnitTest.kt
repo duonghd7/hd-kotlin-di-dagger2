@@ -1,4 +1,4 @@
-package com.hdd.kotlindiwithdagger2
+package hd.kotlin.dagger2
 
 import org.junit.Test
 

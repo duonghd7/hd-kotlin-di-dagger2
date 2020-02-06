@@ -1,4 +1,4 @@
-package com.hdd.kotlindiwithdagger2.infrastructures.scope
+package hd.kotlin.dagger2.infrastructures.scope
 
 import javax.inject.Scope
 
@@ -9,4 +9,4 @@ import javax.inject.Scope
 
 @Scope
 @kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
-annotation class ApplicationScope
+annotation class ActivityScope

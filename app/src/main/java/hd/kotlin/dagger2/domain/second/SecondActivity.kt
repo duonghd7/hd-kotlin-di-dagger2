@@ -1,11 +1,11 @@
-package com.hdd.kotlindiwithdagger2.domain.second
+package hd.kotlin.dagger2.domain.second
 
 import android.app.Activity
 import android.os.Bundle
-import com.hdd.kotlindiwithdagger2.MainApplication
-import com.hdd.kotlindiwithdagger2.R
-import com.hdd.kotlindiwithdagger2.infrastructures.model.Person
-import com.hdd.kotlindiwithdagger2.infrastructures.module.ActivityModule
+import hd.kotlin.dagger2.MainApplication
+import hd.kotlin.dagger2.R
+import hd.kotlin.dagger2.infrastructures.model.Person
+import hd.kotlin.dagger2.infrastructures.module.ActivityModule
 import kotlinx.android.synthetic.main.activity_second.*
 import javax.inject.Inject
 

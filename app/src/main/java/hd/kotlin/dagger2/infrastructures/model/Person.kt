@@ -1,4 +1,4 @@
-package com.hdd.kotlindiwithdagger2.infrastructures.model
+package hd.kotlin.dagger2.infrastructures.model
 
 /**
  * Created on 1/22/2018.

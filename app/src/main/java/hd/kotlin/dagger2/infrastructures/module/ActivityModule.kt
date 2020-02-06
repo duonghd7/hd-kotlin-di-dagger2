@@ -1,4 +1,4 @@
-package com.hdd.kotlindiwithdagger2.infrastructures.module
+package hd.kotlin.dagger2.infrastructures.module
 
 import dagger.Module
 

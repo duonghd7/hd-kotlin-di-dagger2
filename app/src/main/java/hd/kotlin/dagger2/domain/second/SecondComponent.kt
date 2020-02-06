@@ -1,8 +1,8 @@
-package com.hdd.kotlindiwithdagger2.domain.second
+package hd.kotlin.dagger2.domain.second
 
-import com.hdd.kotlindiwithdagger2.infrastructures.module.ActivityModule
-import com.hdd.kotlindiwithdagger2.infrastructures.module.ApplicationComponent
-import com.hdd.kotlindiwithdagger2.infrastructures.scope.ActivityScope
+import hd.kotlin.dagger2.infrastructures.module.ActivityModule
+import hd.kotlin.dagger2.infrastructures.module.ApplicationComponent
+import hd.kotlin.dagger2.infrastructures.scope.ActivityScope
 import dagger.Component
 
 /**
