@@ -63,7 +63,7 @@
 - [HomeComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/home/HomeComponent.kt)
 - [SecondActivity.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/second/SecondActivity.kt)
 - [SecondComponent.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/domain/second/SecondComponent.kt)
-- [MainApplication.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/MainApplication.kt)
+- [MainApplication.kt](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/MainApplication.kt)
 - [AndroidManifest.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/AndroidManifest.xml)
 ```
     <application
@@ -77,7 +77,7 @@
 - [activity_second.xml](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/res/layout/activity_second.xml)
 
 ### III. Use
-- In [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt), create [Person](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/model/Person.kt) for app
+- In [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ApplicationModule.kt), create [Person](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/model/Person.kt) for app
 ```
     @Module
     class ApplicationModule(val app: Application) {
@@ -90,7 +90,7 @@
         }
     }
 ```
-- In [ApplicationComponent](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationComponent.kt) provide resources created by [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/com/hdd/kotlindiwithdagger2/infrastructures/module/ApplicationModule.kt)
+- In [ApplicationComponent](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ApplicationComponent.kt) provide resources created by [ApplicationModule](https://github.com/duonghd7/hd-kotlin-di-dagger2/blob/master/app/src/main/java/hd/kotlin/dagger2/infrastructures/module/ApplicationModule.kt)
 ```
     @ApplicationScope
     @Component(modules = arrayOf(ApplicationModule::class))
